@@ -5,11 +5,11 @@ javascript canvas own library
 ## API
 
 * [**createImage(_url_)**](#createimageurl "createImage") - return image html `<img>`
-* [**createImageWithOutline(_url, width, height, outlineWidth_)**](#createImageWithOutline(_url,-width,-height,-outlineWidth_), "createImageWithOutline") - return image html already running drawOutline `<img>`
-* [**drawImage(_image, width, height)**](#drawImage(_image,-width,-height_), "drawImage") - return image data canvas from image html `array[width*height*4]`
-* [**defineNonTransparent(_imageData_)**](#defineNonTransparent(_imageData_), "defineNonTransparent") - return image data coordinate x and y canvas non transparent `array[x, y]`
-* [**marchingSquare(_image, width, height)**](#marchingSquare(_image,-width,-height_), "marchingSquare") - return image html `<img>` and contour edge of image data canvas non transparent `array[width*height*4]`
-* **drawOutline** _(return image html with outline)_
+* [**createImageWithOutline(_url, width, height, outlineWidth_)**](#createimagewithoutlineurl-width-height-outlinewidth "createImageWithOutline") - return image html already running drawOutline `<img>`
+* [**drawImage(_image, width, height)**](#drawimageimage-width-height "drawImage") - return image data canvas from image html `array[width*height*4]`
+* [**defineNonTransparent(_imageData_)**](#definenontransparentimagedata "defineNonTransparent") - return image data coordinate x and y canvas non transparent `array[x, y]`
+* [**marchingSquare(_image, width, height)**](#marchingsquareimage-width-height "marchingSquare") - return image html `<img>` and contour edge of image data canvas non transparent `array[width*height*4]`
+* [**drawOutline(_req, width, height outlineStyle_)**](#drawoutlinereq-width-height-outlinestyle "drawOutline") -return image html with outline `<img>`
 
 ---
 
