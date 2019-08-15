@@ -1,12 +1,12 @@
 class CanvasProcess {
     
-    createImageWithOutline(url, width, height, outline) {
+    createImageWithOutline(url, width, height, outlineStyle) {
         return new Promise(resolve => {
             let image = new Image();
             image.onload = () => {
                 this.marchingSquare(image, width, height)
                     .then( res => {
-                        this.drawOutline(res, outline, width, height)
+                        this.drawOutline(res, width, height, outlineStyle)
                             .then(res => {
                                 resolve(res);
                             })
@@ -118,7 +118,7 @@ class CanvasProcess {
         })
     }
 
-    drawOutline(req, strokeWidth, width, height) {
+    drawOutline(req, width, height, outlineStyle) {
         return new Promise(resolve => {
             let canvas = document.createElement('canvas');
             canvas.width = width;
@@ -126,9 +126,9 @@ class CanvasProcess {
             let ctx = canvas.getContext('2d');
             let contour = req.contour;
             ctx.beginPath();
-            ctx.fillStyle = "red";
-            ctx.strokeStyle = "blue";
-            ctx.lineWidth = strokeWidth;
+            ctx.fillStyle = outlineStyle.background;
+            ctx.strokeStyle = outlineStyle.stroke;
+            ctx.lineWidth = outlineStyle.width;
             ctx.moveTo(contour[0][0], contour[0][1]);
 
             for(let i = 0; i< contour.length; i++) {
