@@ -1,6 +1,6 @@
 class CanvasProcess {
     
-    createImage(url, width, height, outline) {
+    createImageWithOutline(url, width, height, outline) {
         return new Promise(resolve => {
             let image = new Image();
             image.onload = () => {
@@ -11,7 +11,17 @@ class CanvasProcess {
                                 resolve(res);
                             })
                     })
-                // resolve(image);
+            }
+
+            image.src = url;
+        });
+    }
+
+    createImage(url) {
+        return new Promise(resolve => {
+            let image = new Image();
+            image.onload = () => {               
+                resolve(image);
             }
 
             image.src = url;
