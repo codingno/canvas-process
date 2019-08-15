@@ -4,7 +4,7 @@ javascript canvas own library
 
 ## API
 
-* [**createImage(_url_)**](#createimageurl, "createImage") - return image html `<img>`
+* [**createImage(_url_)**](#createimageurl "createImage") - return image html `<img>`
 * [**createImageWithOutline(_url, width, height, outlineWidth_)**](#createImageWithOutline(_url,-width,-height,-outlineWidth_), "createImageWithOutline") - return image html already running drawOutline `<img>`
 * [**drawImage(_image, width, height)**](#drawImage(_image,-width,-height_), "drawImage") - return image data canvas from image html `array[width*height*4]`
 * [**defineNonTransparent(_imageData_)**](#defineNonTransparent(_imageData_), "defineNonTransparent") - return image data coordinate x and y canvas non transparent `array[x, y]`
